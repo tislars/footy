@@ -5,7 +5,7 @@ import {
   updateBall,
   getBallPosition,
 } from './ball.js';
-import { CANVAS_WIDTH, CANVAS_HEIGHT, drawMap } from './map.js';
+import { MAP_WIDTH, MAP_HEIGHT, drawMap } from './map.js';
 import {
   drawPlayer,
   updatePlayer,
@@ -26,7 +26,7 @@ let mouseY = 0;
  * The main game loop. This function is called repeatedly to update and draw the game.
  */
 function gameLoop() {
-  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  ctx.clearRect(0, 0, MAP_WIDTH, MAP_HEIGHT);
 
   drawMap(ctx);
 
@@ -90,8 +90,8 @@ function initGame() {
     return;
   }
 
-  canvas.width = CANVAS_WIDTH;
-  canvas.height = CANVAS_HEIGHT;
+  canvas.width = MAP_WIDTH;
+  canvas.height = MAP_HEIGHT;
 
   window.addEventListener('keydown', (e) =>
     handleKeyDown(e.key.toLowerCase())

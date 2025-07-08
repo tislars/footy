@@ -1,5 +1,5 @@
-export const CANVAS_WIDTH = 800;
-export const CANVAS_HEIGHT = 500;
+export const MAP_WIDTH = 800;
+export const MAP_HEIGHT = 500;
 
 /**
  * Helper function to draw a circle.
@@ -27,7 +27,7 @@ function drawCircle(ctx, x, y, radius, fill) {
  */
 function drawBackground(ctx) {
   ctx.fillStyle = '#013220';
-  ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  ctx.fillRect(0, 0, MAP_WIDTH, MAP_HEIGHT);
 }
 
 /**
@@ -36,9 +36,9 @@ function drawBackground(ctx) {
  * @param {CanvasRenderingContext2D} ctx - The 2D rendering context of the canvas.
  */
 function drawCenterLine(ctx) {
-  const canvasCenterX = CANVAS_WIDTH / 2;
+  const canvasCenterX = MAP_WIDTH / 2;
   ctx.fillStyle = '#ffffffaa';
-  ctx.fillRect(canvasCenterX - 2, 0, 4, CANVAS_HEIGHT);
+  ctx.fillRect(canvasCenterX - 2, 0, 4, MAP_HEIGHT);
 }
 
 /**
@@ -47,8 +47,8 @@ function drawCenterLine(ctx) {
  * @param {CanvasRenderingContext2D} ctx - The 2D rendering context of the canvas.
  */
 function drawCenterCircles(ctx) {
-  const canvasCenterX = CANVAS_WIDTH / 2;
-  const canvasCenterY = CANVAS_HEIGHT / 2;
+  const canvasCenterX = MAP_WIDTH / 2;
+  const canvasCenterY = MAP_HEIGHT / 2;
 
   ctx.strokeStyle = '#ffffffaa';
   ctx.lineWidth = 4;

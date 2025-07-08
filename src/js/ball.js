@@ -1,8 +1,8 @@
-import { CANVAS_HEIGHT, CANVAS_WIDTH } from './map.js';
+import { MAP_HEIGHT, MAP_WIDTH } from './map.js';
 
 let ball = {
-  x: CANVAS_WIDTH / 2,
-  y: CANVAS_HEIGHT / 2,
+  x: MAP_WIDTH / 2,
+  y: MAP_HEIGHT / 2,
   color: '#fff',
   dx: 0,
   dy: 0,
@@ -58,16 +58,16 @@ export function updateBall() {
   if (ball.x - ball.radius < 0) {
     ball.x = ball.radius;
     ball.dx *= -1;
-  } else if (ball.x + ball.radius > CANVAS_WIDTH) {
-    ball.x = CANVAS_WIDTH - ball.radius;
+  } else if (ball.x + ball.radius > MAP_WIDTH) {
+    ball.x = MAP_WIDTH - ball.radius;
     ball.dx *= -1;
   }
 
   if (ball.y - ball.radius < 0) {
     ball.y = ball.radius;
     ball.dy *= -1;
-  } else if (ball.y + ball.radius > CANVAS_HEIGHT) {
-    ball.y = CANVAS_HEIGHT - ball.radius;
+  } else if (ball.y + ball.radius > MAP_HEIGHT) {
+    ball.y = MAP_HEIGHT - ball.radius;
     ball.dy *= -1;
   }
 }

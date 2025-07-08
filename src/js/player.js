@@ -1,12 +1,12 @@
 import { shootBall } from './ball.js';
-import { CANVAS_HEIGHT, CANVAS_WIDTH } from './map.js';
+import { MAP_HEIGHT, MAP_WIDTH } from './map.js';
 
 const PLAYER_SIZE = 8;
 const PLAYER_SPEED = 0.5;
 
 let player = {
-  x: CANVAS_WIDTH / 2,
-  y: CANVAS_HEIGHT / 2,
+  x: MAP_WIDTH / 2,
+  y: MAP_HEIGHT / 2,
   size: PLAYER_SIZE,
   color: '#b0a',
   dx: 0,
@@ -53,14 +53,14 @@ export function updatePlayer() {
   if (player.x - effectivePlayerRadius < 0) {
     player.x = effectivePlayerRadius;
   }
-  if (player.x + effectivePlayerRadius > CANVAS_WIDTH) {
-    player.x = CANVAS_WIDTH - effectivePlayerRadius;
+  if (player.x + effectivePlayerRadius > MAP_WIDTH) {
+    player.x = MAP_WIDTH - effectivePlayerRadius;
   }
   if (player.y - effectivePlayerRadius < 0) {
     player.y = effectivePlayerRadius;
   }
-  if (player.y + effectivePlayerRadius > CANVAS_HEIGHT) {
-    player.y = CANVAS_HEIGHT - effectivePlayerRadius;
+  if (player.y + effectivePlayerRadius > MAP_HEIGHT) {
+    player.y = MAP_HEIGHT - effectivePlayerRadius;
   }
 }
 
