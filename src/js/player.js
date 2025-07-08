@@ -8,7 +8,7 @@ let player = {
   x: MAP_WIDTH / 2,
   y: MAP_HEIGHT / 2,
   size: PLAYER_SIZE,
-  color: '#b0a',
+  color: '#ff0000',
   dx: 0,
   dy: 0,
   rotation: 0,
